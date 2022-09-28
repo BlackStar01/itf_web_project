@@ -1,6 +1,4 @@
 # itf_web_project
-<<<<<<< HEAD
-=======
 
 ## Author
 
@@ -58,4 +56,3 @@ The user should be able to do these more things
     - The one depending on what he budgeted
     
     - The one depending on what he is really earning and spending
->>>>>>> main
