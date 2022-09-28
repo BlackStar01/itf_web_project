@@ -16,10 +16,27 @@
 
 ## Run Locally
 
+### Requirements
+
+```bash
+  System : Your ssytem (Ubuntu 22)
+  Python 3.10.6
+  Django version >= 4 (4.1.1)
+  npm >= 8 (8.19.1)
+  nodejs >= 12 (v12.22.9)
+```
+
 Start the server front end
 
 ```bash
   npm run dev
+```
+
+Start the server front end
+
+```bash
+  python manage.py migrate
+  python manage.py runserver
 ```
 
 ## Context
