@@ -10,60 +10,6 @@
         </nav>  
         <main>
             <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
-            <h1>ksrhjg</h1>
         </main>
     </div>
 </template>
