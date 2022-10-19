@@ -7,9 +7,9 @@ export const routes = [
     meta: { requiresAuth: false },
   },
   {
-    path: "/auth",
-    name: "auth",
-    component: () => import("@/views/Auth.vue"),
+    path: "/home",
+    name: "home",
+    component: () => import("@/views/Home.vue"),
   },
   /* {
     path: "/dashboard",
