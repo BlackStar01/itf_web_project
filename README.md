@@ -3,7 +3,7 @@
 ## Author
 
 - [@BlackStar01](https://www.github.com/BlackStar01) (vitalwarren@yahoo.com)
-- [@M4rluc44](https://github.com/M4rluc44) (vitalwarren@yahoo.com)
+- [@M4rluc44](https://github.com/M4rluc44) (marin-pierre.babin@efrei.net)
 - [@Chloe0609](https://www.github.com/Chloe0609) (chloe.tournoux@efrei.net)
 
 ## Tech Stack
