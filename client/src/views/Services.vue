@@ -1,7 +1,7 @@
 <template>
     <div class="services">
-        <h2> Dashboard </h2>
-        <div class="service" v-for="service in services" :key="service.name">
+        <h2> My services </h2>
+        <div @click="goToMicroService(service)" class="service" v-for="service in services" :key="service.id" :style="'background-color:' + service.color + ';'">
             <span> {{ service.name }} </span>
             <small> {{ service.price }} </small>
         </div>
@@ -10,31 +10,57 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const route = useRouter()
 
 const services = ref([
     {
+        id: 1,
         name: " Service 1 ",
         price: 40523,
         color: "blue"
     },
     {
+        id: 2,
         name: " Service 2 ",
         price: 40523,
-        color: "blue"
+        color: "pink"
     },
     {
+        id: 3,
         name: " Service 3 ",
         price: 40523,
-        color: "blue"
+        color: "orange"
     },
 ])
+
+const goToMicroService = (e) => {
+    route.push('/home/' + e.id)
+}
 </script>
 
 <style scoped>
 .services {
     margin: 40px;
+    cursor: pointer;
 }
 h2 {
     margin: 40px 0px;
+}
+.service {
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 1px 2px 5px #ccc;
+    position: relative;
+}
+span {
+    font-weight: bolder;
+}
+small {
+    position: absolute;
+    right: 10%;
 }
 </style>

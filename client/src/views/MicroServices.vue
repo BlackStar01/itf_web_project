@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="microservice">
 
         <nav>
             <div class="user">
@@ -22,23 +22,21 @@
             </div>
         </nav>
         <main>
-            <component :is="currentComponent" />
+            <h2> MicroService {{ $route.params.id }}</h2>
         </main>
+    </div>
+    <div>
+
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import Dashboard from "@/views/Dashboard.vue";
-import Services from "@/views/Services.vue"
-import NewService from "@/views/NewService.vue"
-
-const currentComponent = ref(Dashboard)
 
 </script>
 
+
 <style scoped>
-#home {
+#microservice {
     background-color: rgb(243, 243, 243);
     position: relative;
     min-height: fit-content;
