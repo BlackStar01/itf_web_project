@@ -22,7 +22,7 @@ button {
     height: 50px;
     width: 100%;
     color: white;
-    background-color: red;
+    background-color: rgb(255, 59, 59);
     cursor: pointer;
 }
 </style>
