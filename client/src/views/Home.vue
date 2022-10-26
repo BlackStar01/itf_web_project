@@ -2,10 +2,11 @@
     <div id="home">
         <nav>
             <div class="nav">
-                <router-link to="/"> Dashboard </router-link>
-                <router-link to="/"> New expense </router-link>
-                <router-link to="/"> List expense </router-link>
-                <router-link to="/"> Dashboard </router-link>
+                <router-link to="/home" @click="currentComponent = Dashboard"> Dashboard </router-link>
+                <router-link to="/home" @click="currentComponent = Services"> My services </router-link>
+                <router-link to="/home" @click="currentComponent = NewService"> New service </router-link>
+                <router-link to="/home" @click="currentComponent = Services"> New transaction </router-link>
+                <router-link to="/"> Logout </router-link>
             </div>
         </nav>  
         <main>
@@ -15,7 +16,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+import Dashboard from "@/views/Dashboard.vue";
+import Services from "@/views/Services.vue"
+import NewService from "@/views/NewService.vue"
+
+const currentComponent = ref(Dashboard)
 
 </script>
 
