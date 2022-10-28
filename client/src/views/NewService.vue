@@ -13,7 +13,7 @@
                 <label> Select a categorie of service </label>
                 <select name="" v-model="newService.categorieServices">
                     <option disabled default value=""> Select the project </option>
-                    <option :value="service.nameProject" v-for="category in allCategories" :key="category"> {{
+                    <option :value="category" v-for="category in allCategories" :key="category"> {{
                             category
                     }} </option>
                 </select>
@@ -42,7 +42,7 @@ const allCategories = ref(null);
 
 const newService = ref({
     selectedProject: "",
-    categorieServices: allCategories,
+    categorieServices: "",
     nameService: "",
     amountOfService: 0,
 })
@@ -55,10 +55,14 @@ onMounted(() => {
         })
 })
 
-
-
-const createService = () => {
-    console.log(JSON.stringify(allCategories.value))
+const createService = async () => {
+    const response = await fetch('http://localhost:3005/api/newService', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(allCategories.value)
+    })
+    const res = await response.status
+    console.log(res)
 }
 
 const services = ref([
