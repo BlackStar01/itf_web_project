@@ -92,11 +92,9 @@ const services = ref([
     margin: 40px;
     cursor: pointer;
 }
-
 h2 {
     margin: 40px 0px;
 }
-
 .service {
     margin: 15px;
     padding: 20px;
@@ -106,28 +104,23 @@ h2 {
     box-shadow: 1px 2px 5px #ccc;
     position: relative;
 }
-
 span {
     font-weight: bolder;
 }
-
 small {
     position: absolute;
     right: 10%;
 }
-
 form {
     padding: 40px 40px;
     border: 1px solid transparent;
     background-color: white;
     box-shadow: 2px 5px 10px #ccc;
 }
-
 .formgroup {
     display: block;
     margin: 40px 0px;
 }
-
 input,
 select {
     background-color: #ccc;

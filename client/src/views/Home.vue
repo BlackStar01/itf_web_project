@@ -1,6 +1,5 @@
 <template>
     <div id="home">
-
         <nav>
             <div class="user">
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +45,6 @@ const currentComponent = ref(Dashboard)
     position: relative;
     min-height: fit-content;
 }
-
 nav {
     background-color: white;
     box-shadow: 1px 2px 5px #ccc;
@@ -57,7 +55,6 @@ nav {
     right: 80%;
     text-align: center;
 }
-
 nav a {
     display: block;
     text-decoration: none;
@@ -65,7 +62,6 @@ nav a {
     margin: 15px 0px;
     padding: 10px 0px;
 }
-
 nav .user {
     padding: 50px 0px;
 }

@@ -24,7 +24,6 @@
 import { ref, onMounted } from 'vue';
 import forminput from '@/components/Form/forminput.vue'
 import formbutton from '@/components/Form/formbtn.vue'
-import axios from "axios";
 
 const inputs = ref({
     register: {
@@ -45,7 +44,6 @@ const inputs = ref({
         },
     }
 })
-
 
 const try_create_project = async () => {
     let inputs = window.document.getElementsByClassName('form_input');
