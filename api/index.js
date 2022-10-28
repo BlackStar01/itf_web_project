@@ -46,27 +46,28 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
   let email = req.body.email
-  let pwd = req.body.password 
-  let sql = "select * from users";
-  db.query(sql, function (err, result) {
-    if (err) throw err;
-    return result;
-  });
-})
-
-app.post('/register', (req, res) => {
-  let firstName = req.body.firstName
-  let lastName = req.body.lastName
-  let email = req.body.email
-  let pwd = req.body.password
+  let pwd = req.body.password   
   let sql = "select * from users where email = '"+email+"' and password = '"+ password + "'";
   db.query(sql, function (err, result) {
     if (err) throw err;
     return result;
   });
+  
 })
 
-app.get('/users', (req, res) => {
+app.post('/register', (req, res) => {
+  let f_name = req.body.firstName
+  let l_name = req.body.lastName
+  let email = req.body.email
+  let pwd = req.body.password
+  let sql = "INSERT INTO users values('" + f_name + "','"+ l_name + "'" + email + "'" + pwd +"')";
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    return result;
+  });
+})
+
+app.post('/users', (req, res) => {
   let sql = "select * from users";
   db.query(sql, function (err, result) {
     if (err) throw err;
@@ -74,6 +75,35 @@ app.get('/users', (req, res) => {
   });
 })
 
-app.listen(port, () => {
-  console.log(`Example listening on port ${port}`)
+app.post('/addProject', (req, res) => {
+  let name = req.body.name
+  let budget = req.body.budget
+  let color = req.body.color
+  
+  let sql = "INSERT INTO project values('" + name + "','"+ budget + "'" + color + "')";
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    return result;
+  });
+})
+
+
+app.post('/removeProject', (req, res) => {
+  let id = req.body.id
+  
+  let sql = "DELETE FROM project WHERE id = '"+ id + "'";
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    return result;
+  });
+})
+
+app.put('/updateProject', (req, res) => {
+  let id = req.body.id
+  
+  let sql = "UPDATE project id = '"+ id +"'";
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    return result;
+  });
 })
