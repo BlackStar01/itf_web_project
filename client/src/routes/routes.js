@@ -15,7 +15,7 @@ export const routes = [
     path: "/home/:id",
     name: "microservice",
     children: [
-      { path: '', component: import("@/views/MicroServices.vue") },
+      { path: '', component: () => import("@/views/MicroServices.vue") },
     ],
   },
   {

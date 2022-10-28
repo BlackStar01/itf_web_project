@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard">
-        <h2> Dashboard </h2>
+        <h2> DASHBOARD </h2>
         <div class="stat">
             <Card v-for="statistique in statistiques" :key="statistique.number" :title="statistique.title"
                 :price="statistique.price" :col="statistique.color"></Card>

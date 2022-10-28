@@ -16,13 +16,14 @@
             <div class="nav">
                 <router-link to="/home" @click="currentComponent = Dashboard"> Dashboard </router-link>
                 <router-link to="/home" @click="currentComponent = Services"> My services </router-link>
-                <router-link to="/home" @click="currentComponent = NewService"> New service </router-link>
+                <router-link to="/home" @click="currentComponent = NewProject"> New service </router-link>
                 <router-link to="/home" @click="currentComponent = Services"> New transaction </router-link>
                 <router-link to="/"> Logout </router-link>
             </div>
         </nav>
         <main>
-            <h2> MicroService {{ $route.params.id }}</h2>
+            <h2> Project {{ $route.params.id }}</h2>
+
         </main>
     </div>
     <div>

@@ -1,6 +1,6 @@
 <template>
     <div class="services">
-        <h2> My services </h2>
+        <h2> MY PROJECTS </h2>
         <div @click="goToMicroService(service)" class="service" v-for="service in services" :key="service.id" :style="'background-color:' + service.color + ';'">
             <span> {{ service.name }} </span>
             <small> {{ service.price }} </small>
