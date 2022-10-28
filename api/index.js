@@ -29,12 +29,12 @@ db.connect(function (err) {
 
 const corsOptions = {
   origin: 'http://localhost:5173',
-  optionsSuccessStatus: 200, // For legacy browser support
+  optionsSuccessStatus: 200,
   methods: "GET, PUT, POST, DELETE",
 }
 const app = express()
 app.use(cors(corsOptions));
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+app.use(bodyParser.urlencoded({
   extended: true
 })); 
 
@@ -64,9 +64,7 @@ app.post('/register', (req, res) => {
     if (err) throw err;
     return result;
   });
-
 })
-
 
 app.get('/users', (req, res) => {
   let sql = "select * from users";

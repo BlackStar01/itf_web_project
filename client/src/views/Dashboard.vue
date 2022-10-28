@@ -18,33 +18,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td data-label="Projet"> Restaurant </td>
-                    <td data-label="Description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </td>
-                    <td data-label="Type"> Income </td>
-                    <td data-label="Type"> 14/10/22 </td>
-                    <td data-label="Montant">4000</td>
-                </tr>
-                <tr>
-                    <td data-label="Projet"> Textile </td>
-                    <td data-label="Description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </td>
-                    <td data-label="Type"> Income </td>
-                    <td data-label="Type"> 14/10/22 </td>
-                    <td data-label="Montant">2000</td>
-                </tr>
-                <tr>
-                    <td data-label="Projet"> Textile </td>
-                    <td data-label="Description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </td>
-                    <td data-label="Type"> Expenses </td>
-                    <td data-label="Type"> 14/10/22 </td>
-                    <td data-label="Montant">6000</td>
-                </tr>
-                <tr>
-                    <td data-label="Projet"> Parfumerie </td>
-                    <td data-label="Description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </td>
-                    <td data-label="Type"> Income </td>
-                    <td data-label="Type"> 14/10/22 </td>
-                    <td data-label="Montant">200</td>
+                <tr v-for="project in projects" :key="project.nameProject">
+                    <td data-label="Projet"> {{project.nameProject}} </td>
+                    <td data-label="Description"> {{project.description}} </td>
+                    <td data-label="Type"> {{project.type}} </td>
+                    <td data-label="Date"> {{project.date}} </td>
+                    <td data-label="Montant"> {{project.montant}} </td>
                 </tr>
             </tbody>
         </table>
@@ -53,8 +32,23 @@
 
 <script setup>
 import { ref } from 'vue';
-
 import Card from "@/components/Dashboard/Card.vue";
+const projects = ref([
+    {
+        nameProject: "Restaurant",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+        type: "Income",
+        date:  "14/10/22",
+        montant: 4000
+    },
+    {
+        nameProject: "Pharmacie",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+        type: "Expense",
+        date:  "24/04/22",
+        montant: 1000
+    }
+])
 const statistiques = ref([
     {
         number: 1,

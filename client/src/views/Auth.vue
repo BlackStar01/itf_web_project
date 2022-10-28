@@ -100,38 +100,24 @@ const try_login = async () => {
     let inputs = window.document.getElementsByClassName('login_input');
     const data_login = { email: inputs[0].childNodes[1].value, password: inputs[1].childNodes[1].value }
 
-    console.log(data_login)
+    const response = await fetch('http://localhost:3000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data_login)
+    })
+
+    return response.json();
 }
 
 const try_register = async () => {
     let inputs = window.document.getElementsByClassName('register_input');
     const data_login = { firstname: inputs[0].childNodes[1].value, lastname: inputs[1].childNodes[1].value, email: inputs[2].childNodes[1].value, password: inputs[3].childNodes[1].value, confirmationPassword: inputs[4].childNodes[1].value }
-    /* if (check_mail(data_login.email)) {
-        const response = await fetch('http://localhost:3005/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data_login)
-        })
-        const is_user = response.status === 201 ? true : false
-        if (is_user) {
-            const res = await response.json()
-            message.value = res.message
-            notif.value = '#004b23',
-                bgnotif.value = '#4FCE66'
-            window.localStorage.setItem('token', res.token);
-            loading.value = true
-            action.value = ''
-            setTimeout(() => {
-                router.push('/')
-            }, 2000);
-        }
-        else {
-            message.value = "Failed"
-            notif.value = '#dd0426'
-            bgnotif.value = '#ff9696'
-        }
-    } */
-    console.log(data_login)
+    const response = await fetch('http://localhost:3005/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data_login)
+    })
+    return  response.json()
 }
 
 
