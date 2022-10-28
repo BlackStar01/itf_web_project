@@ -2,14 +2,6 @@
     <div id="home">
 
         <nav>
-<<<<<<< HEAD
-            <div class="nav">
-                <router-link to="/home" @click="currentComponent = Dashboard"> Dashboard </router-link>
-                <router-link to="/home" @click="currentComponent = Services"> My Projects </router-link>
-                <router-link to="/home" @click="currentComponent = NewService"> New Project </router-link>
-                <router-link to="/home" @click="currentComponent = NewTransaction"> New Transaction </router-link>
-                <router-link to="/"> Logout </router-link>
-=======
             <div class="user">
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -20,13 +12,13 @@
                         fill="currentColor" />
                 </svg>
                 <h3> Name of user </h3>
->>>>>>> df0e06d1e7ce65963ffc22323ecbeaf119da514c
             </div>
             <div class="nav">
                 <router-link to="/home" @click="currentComponent = Dashboard"> Dashboard </router-link>
-                <router-link to="/home" @click="currentComponent = Services"> My Projects </router-link>
-                <router-link to="/home" @click="currentComponent = NewService"> New Project </router-link>
+                <router-link to="/home" @click="currentComponent = Projects"> My Projects </router-link>
+                <router-link to="/home" @click="currentComponent = NewProject"> New Project </router-link>
                 <router-link to="/home" @click="currentComponent = NewTransaction"> New Transaction </router-link>
+                <router-link to="/home" @click="currentComponent = NewService"> New Service </router-link>
                 <router-link to="/"> Logout </router-link>
             </div>
         </nav>
@@ -39,9 +31,10 @@
 <script setup>
 import { ref } from 'vue';
 import Dashboard from "@/views/Dashboard.vue";
-import Services from "@/views/Services.vue"
-import NewService from "@/views/NewService.vue"
+import Projects from "@/views/Projects.vue"
+import NewProject from "@/views/NewProject.vue"
 import NewTransaction from "@/views/NewTransaction.vue"
+import NewService from '@/views/NewService.vue'
 
 const currentComponent = ref(Dashboard)
 

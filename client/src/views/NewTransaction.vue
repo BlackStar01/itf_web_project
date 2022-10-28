@@ -1,6 +1,6 @@
 <template>
     <div class="transactions">
-        <h2> New transaction </h2>
+        <h2> NEW TRANSACTION </h2>
         <form action="">
             <label> Select a project </label>
             <select name="" v-model="newProject.selectedProject">
