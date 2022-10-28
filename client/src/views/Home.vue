@@ -3,9 +3,9 @@
         <nav>
             <div class="nav">
                 <router-link to="/home" @click="currentComponent = Dashboard"> Dashboard </router-link>
-                <router-link to="/home" @click="currentComponent = Services"> My services </router-link>
-                <router-link to="/home" @click="currentComponent = NewService"> New service </router-link>
-                <router-link to="/home" @click="currentComponent = Services"> New transaction </router-link>
+                <router-link to="/home" @click="currentComponent = Services"> My Projects </router-link>
+                <router-link to="/home" @click="currentComponent = NewService"> New Project </router-link>
+                <router-link to="/home" @click="currentComponent = NewTransaction"> New Transaction </router-link>
                 <router-link to="/"> Logout </router-link>
             </div>
         </nav>  
@@ -20,6 +20,7 @@ import { ref } from 'vue';
 import Dashboard from "@/views/Dashboard.vue";
 import Services from "@/views/Services.vue"
 import NewService from "@/views/NewService.vue"
+import NewTransaction from "@/views/NewTransaction.vue"
 
 const currentComponent = ref(Dashboard)
 
