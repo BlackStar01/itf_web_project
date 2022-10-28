@@ -12,7 +12,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router';
 const route = useRouter()
-let compt = ref(6)
+let compt = ref(4)
 let expression = ref('secondes')
 onMounted(() => {
     setInterval(() => {
@@ -21,7 +21,7 @@ onMounted(() => {
     }, 1000);
     setTimeout(() => {
         route.push('/')
-    }, 7000);
+    }, 3000);
 })
 </script>
 
