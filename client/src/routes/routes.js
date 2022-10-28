@@ -12,15 +12,19 @@ export const routes = [
     component: () => import("@/views/Home.vue"),
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* {
     path: "/dashboard",
     component: () => import("@/views/dashboard.vue"),
+=======
+  {
+    path: "/home/:id",
+    name: "microservice",
+>>>>>>> df0e06d1e7ce65963ffc22323ecbeaf119da514c
     children: [
-      {
-        path: "history",
-        component: () => import("./views/dashboard/history.vue"),
-      },
+      { path: '', component: import("@/views/MicroServices.vue") },
     ],
+<<<<<<< HEAD
   }, */
   /* {
 =======
@@ -33,8 +37,12 @@ export const routes = [
   },
   {
 >>>>>>> 9f27ef9 (Update)
+=======
+  },
+  {
+>>>>>>> df0e06d1e7ce65963ffc22323ecbeaf119da514c
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("@/views/NotFound.vue"),
-  }, */
+  },
 ];
