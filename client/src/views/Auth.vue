@@ -112,12 +112,13 @@ const try_login = async () => {
 const try_register = async () => {
     let inputs = window.document.getElementsByClassName('register_input');
     const data_login = { firstname: inputs[0].childNodes[1].value, lastname: inputs[1].childNodes[1].value, email: inputs[2].childNodes[1].value, password: inputs[3].childNodes[1].value, confirmationPassword: inputs[4].childNodes[1].value }
-    const response = await fetch('http://localhost:3005/api/login', {
+    const response = await fetch('https://localhost:3000/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data_login)
+        body: JSON.parse(JSON.stringify(data_login))
     })
-    return  response.json()
+    console.log(response.json())
+    return response.json()
 }
 
 

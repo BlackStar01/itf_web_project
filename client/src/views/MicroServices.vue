@@ -23,16 +23,29 @@
         </nav>
         <main>
             <h2> Project {{ $route.params.id }}</h2>
+            <div class="services">
+                {{    servicesOfThisProject    }}
+            </div>
 
         </main>
-    </div>
-    <div>
-
     </div>
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue'; 
+import { useRoute } from 'vue-router';
 
+const servicesOfThisProject = ref(null)
+const route = useRoute()
+const theId = route.params.id;
+onMounted( async () => {
+    const response = await fetch('https://localhost:3000/fetchMicro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.parse(JSON.stringify(theId))
+    })
+    servicesOfThisProject.value = response.json()
+})
 </script>
 
 
@@ -65,14 +78,22 @@ nav a {
 nav .user {
     padding: 50px 0px;
 }
+
 .user svg {
     border: 1px solid #ccc;
     border-radius: 50%;
 }
+
 main {
     position: absolute;
     left: 20%;
     width: 80%;
+    margin: 40px;
+}
+
+.services {
+    margin: 15px;
+    padding: 20px;
 }
 </style>
 
