@@ -3,7 +3,7 @@
         <h2> MY PROJECTS </h2>
         <div @click="goToMicroService(service)" class="service" v-for="service in services" :key="service.id" :style="'background-color:' + service.color + ';'">
             <span> {{ service.name }} </span>
-            <small> {{ service.price }} </small>
+            <small> {{ service.price }} € </small>
         </div>
     </div>
 </template>
@@ -16,19 +16,19 @@ const route = useRouter()
 const services = ref([
     {
         id: 1,
-        name: " Service 1 ",
+        name: " Project 1 ",
         price: 40523,
         color: "blue"
     },
     {
         id: 2,
-        name: " Service 2 ",
+        name: " Project 2 ",
         price: 40523,
         color: "pink"
     },
     {
         id: 3,
-        name: " Service 3 ",
+        name: " Project 3 ",
         price: 40523,
         color: "orange"
     },
